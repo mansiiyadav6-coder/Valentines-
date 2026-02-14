@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To My Love Rishu ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', cursive;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    margin: 40px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 520px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ff2e63;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    width: 120px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.heart {
+    position: fixed;
+    color: red;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+
+<script>
+
+// PASSWORD PROTECTION
+function checkPassword() {
+    var password = prompt("Enter the secret password ❤️");
+    if(password !== "rishu123") {
+        alert("Wrong password 💔");
+        document.body.innerHTML = "";
+    }
+}
+
+// SHOW MESSAGE
+function showMessage() {
+    document.getElementById("message").classList.remove("hidden");
+}
+
+// FLOATING HEARTS
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 6000);
+}
+setInterval(createHeart, 800);
+
+// TOGETHER SINCE COUNTER
+function updateCounter() {
+    var startDate = new Date("2023-08-01"); // Change your date here
+    var today = new Date();
+    var diffTime = today - startDate;
+    var days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("days").innerHTML = days;
+}
+
+window.onload = function() {
+    checkPassword();
+    updateCounter();
+}
+
+</script>
+
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+    <h1>To My Love Rishu 🧿❤️🫂✨🔱</h1>
+    <p>Click below to unlock my heart 💌</p>
+    <button onclick="showMessage()">Open My Heart 💖</button>
+
+    <div id="message" class="hidden">
+
+        <h2>My Forever, Rishu ❤️</h2>
+
+        <p>
+            Rishu, you are not just my boyfriend…  
+            you are my safe place, my happiness, and my greatest blessing.  
+            Every moment with you feels magical. ✨
+        </p>
+
+        <p>
+            Thank you for loving me, supporting me,
+            and standing beside me in every situation.  
+            I feel lucky every single day to call you mine. 💕
+        </p>
+
+        <h3>Together Since ❤️</h3>
+        <p>We have been together for <span id="days"></span> beautiful days 🥰</p>
+
+        <!-- Add Your Photo Link Below -->
+        <h3>Our Beautiful Memory 📸</h3>
+        <img src="https://via.placeholder.com/200" alt="Our Photo">
+
+        <h3>Will You Be Mine Forever? 💍</h3>
+        <button onclick="alert('Yayyy! I Love You Rishu ❤️')">Yes 💖</button>
+        <button onclick="alert('Forever & Always Together 🫂❤️')">Always 🥰</button>
+
+        <h3>Special Thank You 💌</h3>
+        <p>
+            Thank you for understanding my silence,  
+            holding my hand when I feel weak,  
+            and loving me unconditionally.  
+            I promise to love you more every single day. ❤️
+        </p>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png">
+
+        <h2>I Love You Forever Rishu ❤️</h2>
+        <p>— Yours Always, Mansi 💖</p>
+
+    </div>
+</div>
+
+</body>
+</html>
